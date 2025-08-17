@@ -50,6 +50,7 @@
 
 ## Estrutura do projeto
 
+```
 [Usuário]
    |
    v
@@ -93,6 +94,8 @@
 
 [circo.sql]
    |---> Cria o banco de dados e a tabela 'reservas' utilizada por todas as funções
+
+```
 
 Resumo:
 
