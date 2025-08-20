@@ -99,6 +99,10 @@
 
 Resumo:
 
-- conexao.php é responsável por conectar ao banco de dados e é incluído em todas as páginas que acessam dados.
-- estilo.css é responsável pela aparência visual e é incluído nas páginas HTML.
-- O arquivo circo.sql é responsável por criar a estrutura do banco de dados e a tabela reservas, que será utilizada por todas as páginas PHP através da conexão feita em conexao.php.
+- index.php: Arquivo principal da aplicação. Exibe a lista de reservas de sessões do circo em uma tabela, permitindo visualizar, editar ou excluir cada reserva. Inclui o arquivo conexao.php para acessar o banco de dados e o arquivo estilo.css para aplicar o visual à página. Possui botões para adicionar nova reserva, editar ou excluir reservas existentes.
+- adicionar_reserva.php: Página responsável por exibir o formulário para cadastrar uma nova reserva de sessão do circo. Ao enviar o formulário, os dados são inseridos no banco de dados (tabela reservas). Após o cadastro, o usuário é redirecionado para o index.php.
+- editar_reserva.php: Permite editar os dados de uma reserva já existente. Busca as informações da reserva selecionada, exibe em um formulário para edição e, ao salvar, atualiza os dados no banco de dados. Após a atualização, redireciona para o index.php.
+- excluir_reserva.php: Arquivo responsável por excluir uma reserva do banco de dados. Recebe o identificador da reserva via parâmetro, realiza a exclusão e redireciona para o index.php.
+- conexao.php: Contém o código para conectar ao banco de dados MySQL utilizando os dados definidos no script circo.sql. É incluído em todas as páginas que precisam acessar o banco de dados.
+- estilo.css: Arquivo de estilos responsável pela aparência visual das páginas HTML da aplicação, tornando a interface mais agradável e organizada.
+- circo.sql: Script SQL utilizado para criar o banco de dados e a tabela reservas, que armazena todas as informações das reservas de sessões do circo. Deve ser executado antes de utilizar a aplicação.
